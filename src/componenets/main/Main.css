@@ -1,0 +1,118 @@
+.main-header {
+  font-size: 600%;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #000000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.sub-header {
+  font-size: 500%;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #000000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.logistics-header {
+  padding-top: 3%;
+  color: black;
+  text-shadow: 0px 0px 2px #000000;
+}
+
+.middle-page-con h5 {
+  padding: 2%;
+}
+.middle-page-con {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.middle-page-col {
+  background-color: whitesmoke;
+  border: 1px solid black;
+}
+
+.container-image-header {
+  color: whitesmoke;
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 300%;
+  padding-top: 25%;
+  padding-bottom: 20%;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.services-and-technologies {
+  padding: 2%;
+}
+.services-and-technologies h4 {
+  padding: 2%;
+}
+
+.card-con h5 {
+  font-weight: bold;
+  font-size: x-large;
+  color: white;
+  padding: 5%;
+  text-shadow: 1px 1px 4px #000000;
+}
+.card-con p {
+  font-weight: bold;
+  font-size: large;
+  color: white;
+  padding: 5%;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+.image-header {
+  color: whitesmoke;
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 450%;
+
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+  border: none;
+}
+.end-page-con {
+  padding: 5%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logos img {
+  width: 100%;
+  height: 50%;
+}
+
+/*-----------mobile-------------  */
+@media only screen and (max-width: 600px) {
+  .main-header {
+    font-size: 100%;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px #000000;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .sub-header {
+    font-size: 150%;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px #000000;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .logistics-header {
+    font-size: 150%;
+    padding-top: 3%;
+    color: black;
+    text-shadow: 0px 0px 1px #000000;
+  }
+  .carusela img {
+    height: 70%;
+    width: 100%;
+  }
+
+  .logos img {
+    width: 100%;
+    height: 50%;
+  }
+
+  .image-header {
+    font-size: 130%;
+  }
+}
