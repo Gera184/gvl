@@ -19,6 +19,7 @@ import planeMain from "../assets/plane-main.jpg";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 import Logo from "../assets/logo.jpg";
 import GvlMap from "../map/GvlMap";
+import ContactUs from "../pages/contact-us/ContactUs";
 
 export const Main = () => {
   // useEffect(() => {
@@ -30,26 +31,7 @@ export const Main = () => {
       <div class="container">
         <div class="row">
           <div class="col text-center align-self-center">
-            <h1 className="main-header">
-              G
-              <VscDebugBreakpointLog
-                className="point-icon"
-                style={{ fontSize: "30%", marginTop: "3%" }}
-              />
-              V
-              <VscDebugBreakpointLog
-                className="point-icon"
-                style={{ fontSize: "30%", marginTop: "3%" }}
-              />
-              L
-            </h1>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col text-center align-self-center">
-            <h1 className="sub-header">Grand Vision Logistics</h1>
+            <h1 className="sub-header">Grand vision logistics</h1>
           </div>
         </div>
         <div class="row">
@@ -59,7 +41,7 @@ export const Main = () => {
         </div>
       </div>
 
-      <div className="carusela container-fluid">
+      <div className="carusela">
         <Carousel>
           <Carousel.Item>
             <img className="d-block w-80" src={planeMain} alt="First slide" />
@@ -235,16 +217,19 @@ export const Main = () => {
             </p>
           </div>
         </div>
-        <div className="row">
-          <div className="col our-offices">
-            <h3>OUR OFFICES IN ISRAEL</h3>
-          </div>
-        </div>
-        <div className="logos align-self-center text-center">
-          <img src={Logo} />
+      </div>
+
+      <div className="row align-self-center text-center">
+        <div className="col">
+          <h3>OUR OFFICES IN ISRAEL</h3>
         </div>
       </div>
+
+      <div className="logos align-self-center text-center">
+        <img src={Logo} />
+      </div>
       <GvlMap />
+      <ContactUs />
     </>
   );
 };

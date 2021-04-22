@@ -1,9 +1,3 @@
-.main-header {
-  font-size: 600%;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px #000000;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
 .sub-header {
   font-size: 500%;
   font-weight: bold;
@@ -64,9 +58,9 @@
   color: whitesmoke;
   text-shadow: 2px 2px 4px #000000;
   font-size: 450%;
-
   font-weight: bold;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 25%;
 }
 
 .card {
@@ -79,7 +73,7 @@
 
 .logos img {
   width: 100%;
-  height: 50%;
+  height: 100%;
 }
 
 /*-----------mobile-------------  */
@@ -106,13 +100,12 @@
     height: 70%;
     width: 100%;
   }
-
-  .logos img {
-    width: 100%;
-    height: 50%;
-  }
-
   .image-header {
     font-size: 130%;
+    padding-bottom: 10%;
+  }
+  .logos img {
+    width: 100%;
+    height: 100%;
   }
 }

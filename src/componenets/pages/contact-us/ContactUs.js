@@ -42,7 +42,9 @@ export default function ContactUs() {
         message: message,
       });
     }
-    alert("Product added successfully");
+    alert(
+      "Your request was successful, we will get back to you as soon as possible. G.V.L team"
+    );
     setName("");
     setEmail("");
     setService("");

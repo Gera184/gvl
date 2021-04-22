@@ -20,9 +20,18 @@ export const Footer = () => {
                     <b>NAVIGATION</b>
                   </h6>
                   <ul class="list-unstyled">
-                    <li>About us</li>
-                    <li>Contact</li>
-                    <li>Cargo tracking</li>
+                    <a style={{ color: "#627482" }} href="/contact-us">
+                      {" "}
+                      <li>About us</li>
+                    </a>
+                    <a style={{ color: "#627482" }} href="/contact-us">
+                      {" "}
+                      <li>Contact</li>
+                    </a>
+                    <a style={{ color: "#627482" }} href="/contact-us">
+                      {" "}
+                      <li>Cargo tracking</li>
+                    </a>
                   </ul>
                 </div>
                 <div class="col-xl-2 col-md-4 col-sm-4 col-12">
@@ -70,11 +79,18 @@ export const Footer = () => {
                     </span>{" "}
                     sales@gvlg.org
                   </small>
+                  <small>
+                    {" "}
+                    <span>
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>{" "}
+                    +972504482278
+                  </small>
                 </div>
                 <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-2 align-self-end mt-3 ">
-                  <h6 class="text-muted bold-text">
+                  {/* <h6 class="text-muted bold-text">
                     <b>CEO</b>
-                  </h6>
+                  </h6> */}
                   <small>
                     <span>
                       <i class="fa fa-envelope" aria-hidden="true"></i>
