@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Col,
   Container,
@@ -16,27 +16,63 @@ import calculator from "../assets/calculator.jpg";
 import businessman from "../assets/businessman.jpg";
 import shipMain from "../assets/ship-main.jpg";
 import planeMain from "../assets/plane-main.jpg";
+import logistics from "../assets/logistics.jpg";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 import Logo from "../assets/logo.jpg";
 import GvlMap from "../map/GvlMap";
 import ContactUs from "../pages/contact-us/ContactUs";
+import Currency from "../currency/Currency";
+import { db } from "../pages/firebase";
 
 export const Main = () => {
-  // useEffect(() => {
-  //   alert("website is under development");
-  // }, []);
+  const [queries, setQueries] = useState([]);
+  const [message, setMessage] = useState("");
+  useEffect(() => {
+    if (db) {
+      const unsubscribe = db
+        .collection("news")
+        .orderBy("createdAt")
+        .limit(100)
+        .onSnapshot((querySnapshot) => {
+          const data = querySnapshot.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+          }));
+          setQueries(data);
+        });
+
+      return unsubscribe;
+    }
+  }, [db]);
 
   return (
     <>
+      <div class="col-md-6 container">
+        <h6 className="text-center align-self-center">Daily news</h6>
+        {queries.map((meassage) => (
+          <section id="block_content">
+            <blockquote class="blockstyle">
+              {" "}
+              <span class="triangle"></span>
+              {meassage.news}{" "}
+            </blockquote>
+          </section>
+        ))}
+      </div>
+
+      <Currency />
       <div class="container">
         <div class="row">
           <div class="col text-center align-self-center">
-            <h1 className="sub-header">Grand vision logistics</h1>
+            <h1 className="sub-header">Grand Vision Logistics</h1>
           </div>
         </div>
+
         <div class="row">
           <div class="col text-center align-sself-center">
-            <h2 className="logistics-header">Logistics Solutions</h2>
+            <h2 className="logistics-header">
+              G.V.L International Shipping Company
+            </h2>
           </div>
         </div>
       </div>
@@ -166,7 +202,7 @@ export const Main = () => {
             <div className="card bg-success mb-3" style={{ width: "20rem" }}>
               <img
                 style={{ width: "20rem", height: "12rem" }}
-                src={businessman}
+                src={logistics}
               />
               <div className="card-body">
                 <h5 className="card-title">Logistics Solutions</h5>

@@ -91,12 +91,12 @@ export const Footer = () => {
                   {/* <h6 class="text-muted bold-text">
                     <b>CEO</b>
                   </h6> */}
-                  <small>
+                  {/* <small>
                     <span>
                       <i class="fa fa-envelope" aria-hidden="true"></i>
                     </span>{" "}
                     vitali@gvlg.org
-                  </small>
+                  </small> */}
                 </div>
               </div>
             </div>
