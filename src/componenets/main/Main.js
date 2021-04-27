@@ -7,6 +7,10 @@ import {
   Card,
   ListGroup,
   ListGroupItem,
+  OverlayTrigger,
+  Tooltip,
+  Image,
+  Alert,
 } from "react-bootstrap";
 import "./Main.css";
 import Plane from "../assets/plane.jpg";
@@ -17,11 +21,9 @@ import businessman from "../assets/businessman.jpg";
 import shipMain from "../assets/ship-main.jpg";
 import planeMain from "../assets/plane-main.jpg";
 import logistics from "../assets/logistics.jpg";
-import { VscDebugBreakpointLog } from "react-icons/vsc";
 import Logo from "../assets/logo.jpg";
 import GvlMap from "../map/GvlMap";
 import ContactUs from "../pages/contact-us/ContactUs";
-import Currency from "../currency/Currency";
 import { db } from "../pages/firebase";
 
 export const Main = () => {
@@ -45,22 +47,41 @@ export const Main = () => {
     }
   }, [db]);
 
+  function AlertDismissibleExample() {
+    const [show, setShow] = useState(true);
+
+    if (show) {
+      return (
+        <div className="container daily-news">
+          <div className="row">
+            <div className="col">
+              <Alert onClose={() => setShow(false)} dismissible>
+                {queries.map((meassage) => (
+                  <p>{meassage.news}</p>
+                ))}
+              </Alert>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <div className="container text-center align-self-center">
+        <div className="row">
+          <div className="col">
+            <a class="orange-moon" type="button" onClick={() => setShow(true)}>
+              Daily news!
+            </a>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <>
-      <div class="col-md-6 container">
-        <h6 className="text-center align-self-center">Daily news</h6>
-        {queries.map((meassage) => (
-          <section id="block_content">
-            <blockquote class="blockstyle">
-              {" "}
-              <span class="triangle"></span>
-              {meassage.news}{" "}
-            </blockquote>
-          </section>
-        ))}
-      </div>
-
-      <Currency />
+      <AlertDismissibleExample />
       <div class="container">
         <div class="row">
           <div class="col text-center align-self-center">

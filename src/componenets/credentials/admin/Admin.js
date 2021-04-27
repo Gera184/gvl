@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../../pages/firebase";
+import { Image, OverlayTrigger, Tooltip, Button, Alert } from "react-bootstrap";
 import "./Admin.css";
 
 export default function Admin() {
@@ -32,20 +33,41 @@ export default function Admin() {
     setMessage("");
   };
 
+  function AlertDismissibleExample() {
+    const [show, setShow] = useState(true);
+
+    if (show) {
+      return (
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <Alert variant="dark" onClose={() => setShow(false)} dismissible>
+                {queries.map((meassage) => (
+                  <p>{meassage.news}</p>
+                ))}
+              </Alert>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <div className="container text-center align-self-center">
+        <div className="row">
+          <div className="col">
+            <a class="orange-moon" type="button" onClick={() => setShow(true)}>
+              Daily news!
+            </a>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="admin-page">
-      <div class="col-md-6 container">
-        <h6 className="text-center align-self-center">Daily news</h6>
-        {queries.map((meassage) => (
-          <section id="block_content">
-            <blockquote class="blockstyle">
-              {" "}
-              <span class="triangle"></span>
-              {meassage.news}{" "}
-            </blockquote>
-          </section>
-        ))}
-      </div>
+      <AlertDismissibleExample />
 
       <div class="container">
         <form

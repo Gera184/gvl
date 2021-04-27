@@ -37,17 +37,17 @@ export const Navbar = () => {
           <a href="/home" className="navbar badge badge-light">
             Home
           </a>
-          <a href="/services" className="navbar badge badge-light">
-            Services
-          </a>
           <a href="/our-story" className="navbar badge badge-light">
             Our Story
           </a>
-          <a href="/contact-us" className="navbar badge badge-light">
-            Contact
+          <a href="/services" className="navbar badge badge-light">
+            Services
           </a>
           <a href="/solutions" className="navbar badge badge-light">
             Solutions
+          </a>
+          <a href="/contact-us" className="navbar badge badge-light">
+            Contact
           </a>
         </div>
       </div>
