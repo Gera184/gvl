@@ -104,9 +104,9 @@ export default function Admin() {
                 setMessage(e.target.value);
               }}
             ></textarea>
-            <a type="submit" class="orange-moon">
+            <button type="submit" class="orange-moon">
               Success
-            </a>
+            </button>
           </form>
         </div>
       </div>
