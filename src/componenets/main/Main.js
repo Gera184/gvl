@@ -17,7 +17,6 @@ import Plane from "../assets/plane.jpg";
 import port from "../assets/port.jpg";
 import ship from "../assets/ship.jpg";
 import calculator from "../assets/calculator.jpg";
-import businessman from "../assets/businessman.jpg";
 import shipMain from "../assets/ship-main.jpg";
 import planeMain from "../assets/plane-main.jpg";
 import logistics from "../assets/logistics.jpg";
